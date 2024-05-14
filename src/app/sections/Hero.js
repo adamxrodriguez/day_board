@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { useTranslation } from "react-i18next";
 
 const Hero = () => {
-  const { status: sessionStatus } =useSession();
+  const { status: sessionStatus } = useSession();
   const [showMenu, setMenuVisibility] = useState(false);
 
   const toggleMenu = () => setMenuVisibility(!showMenu);
@@ -43,7 +43,7 @@ const Hero = () => {
             </nav>
             <Link
               href={
-                sessionStatus === 'authenticated' ? '/account' : '/auth/login'
+                sessionStatus === 'authenticated' ? '/dashboard' : '/auth/login'
               }
               className="w-full px-5 py-2 text-center text-white bg-blue-600 rounded shadow hover:bg-blue-500"
             >

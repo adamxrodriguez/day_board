@@ -1,0 +1,31 @@
+/* Custom styles for the Dashboard Table and Document Upload Modal */
+
+/* Style for the upload button */
+.upload-btn {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Styling for the modal */
+.upload-modal .modal-header,
+.upload-modal .modal-body,
+.upload-modal .modal-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Adjustments for the file input in the modal */
+.custom-file-input {
+  cursor: pointer;
+}
+
+/* Message center styling */
+.message-center {
+  margin-top: 20px;
+}
+
+/* General padding and margin adjustments for better spacing */
+.table-responsive {
+  margin-top: 20px;
+}

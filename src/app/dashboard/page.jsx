@@ -1,22 +1,19 @@
+'use client'
+
 import React from 'react'
 import { useEffect, useState } from 'react'
-import Button from './components/Button/index'
-import Card from './components/Card/index'
-import Content from './components/Content/index'
-import Meta from './components/Meta/index'
+import Button from '../components/Button/index'
+import Card from '../components/Card/index'
+import Content from '../components/Content/index'
+import Meta from '../components/Meta/index'
 import { useTranslation } from 'react-i18next'
-import { LandingLayout } from './layouts/index'
-import MessagesSection from './components/messages'
-import addItemModal from './components/Modal/addItemModal'
-import Sidebar from './components/Sidebar/index'
-import {
-  CogIcon,
-  DocumentIcon,
-  XCircleIcon,
-  CloudArrowUpIcon,
-} from 'heroicons/react/24/outline'
+import { LandingLayout } from '@/app/layouts/LandingLayout'
+import MessagesSection from '@/app/components/messages'
+import addItemModal from '../components/Modal/addItemModal'
+import Sidebar from '../components/Sidebar/index'
+import {CogIcon,DocumentIcon,XCircleIcon,CloudArrowUpIcon,} from '/node_modules/@heroicons/react/24/outline'
 import Link from 'next/link'
-import Table from './components/Table'
+import Table from '../components/Table'
 
 const Dashboard = () => {
   const { t } = useTranslation()
@@ -80,11 +77,11 @@ const Dashboard = () => {
           />
 
           {/*table*/}
-          <Table
+          {/* <Table
             tasks={tasks}
             selectedType={selectedType}
             setSelectedType={setSelectedType}
-          />
+          /> */}
         </div>
       </div>
     </LandingLayout>

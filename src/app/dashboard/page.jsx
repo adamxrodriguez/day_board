@@ -1,9 +1,11 @@
+'use client'
+
 import React from 'react'
 import { useEffect, useState } from 'react'
-import Button from './components/Button/index'
-import Card from './components/Card/index'
-import Content from './components/Content/index'
-import Meta from './components/Meta/index'
+import Button from '../components/Button/index'
+import Card from '../components/Card/index'
+import Content from '../components/Content/index'
+import Meta from '../components/Meta/index'
 import { useTranslation } from 'react-i18next'
 import { LandingLayout } from '@/app/layouts/LandingLayout'
 import MessagesSection from '@/app/dashboard/messages'
@@ -75,11 +77,11 @@ const Dashboard = () => {
           />
 
           {/*table*/}
-          <Table
+          {/* <Table
             tasks={tasks}
             selectedType={selectedType}
             setSelectedType={setSelectedType}
-          />
+          /> */}
         </div>
       </div>
     </LandingLayout>

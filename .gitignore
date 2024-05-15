@@ -17,6 +17,7 @@ app/server/node_modules
 # next.js
 /.next/
 /out/
+day_board/.env
 
 # production
 /build
@@ -40,3 +41,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 src/app/client/node_modules/
+.env
+

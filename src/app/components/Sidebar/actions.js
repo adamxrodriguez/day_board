@@ -8,18 +8,18 @@ import {
 import { useRouter } from 'next/router';
 import toast from 'react-hot-toast';
 
-import Button from '@/components/Button/index';
-import Modal from '@/components/Modal/index';
-import { useWorkspaces } from '@/hooks/data/index';
+import Button from '@/app/components/Button/index';
+import Modal from '@/app/components/Modal/index';
+import { useWorkspaces } from '@/app/hooks/data/index';
 import api from '@/lib/common/api';
-import { useWorkspace } from '@/providers/workspace';
+import { useWorkspace } from '@/app/providers/workspace';
 import { useTranslation } from "react-i18next";
 
 const Actions = () => {
   const { t } = useTranslation();
   const { data, isLoading } = useWorkspaces();
   const { workspace, setWorkspace } = useWorkspace();
-  const router = useRouter();
+  // const router = useRouter();
   const [isSubmitting, setSubmittingState] = useState(false);
   const [name, setName] = useState('');
   const [showModal, setModalState] = useState(false);

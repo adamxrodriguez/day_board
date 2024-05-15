@@ -3,11 +3,11 @@ import { useRouter } from 'next/router';
 import { useSession } from 'next-auth/react';
 import { Toaster } from 'react-hot-toast';
 
-import Content from '@/app/components/Content/index';
-import Header from '@/app/components/Header/index';
-import Sidebar from '@/app/components/Sidebar/index';
-import menu from '@/app/config/menu/index';
-import { useWorkspace } from '@/app/providers/workspace';
+import Content from '@/components/Content/index';
+import Header from '@/components/Header/index';
+import Sidebar from '@/components/Sidebar/index';
+import menu from '@/config/menu/index';
+import { useWorkspace } from '@/providers/workspace';
 
 const AccountLayout = ({ children }) => {
   const { status } = useSession();

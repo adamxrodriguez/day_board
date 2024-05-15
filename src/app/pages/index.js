@@ -1,5 +1,5 @@
 import Meta from '@/components/Meta/index';
-import { LandingLayout } from '@/app/layouts/LandingLayout';
+import { LandingLayout } from '@/layouts/index';
 import {
   CallToAction,
   Features,

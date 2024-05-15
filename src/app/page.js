@@ -1,7 +1,7 @@
 'use client'
 
-import Meta from '@/app/components/Meta/index';
-import { LandingLayout } from '@/app/layouts/LandingLayout';
+import Meta from './components/Meta/index';
+import { LandingLayout } from './layouts/LandingLayout';
  import {
   CallToAction,
   Features,
@@ -17,8 +17,8 @@ import i18n from "i18next";
 import { useTranslation, initReactI18next } from "react-i18next";
 
 
-import '@/app/styles/globals.css';
-let rawdata = require('@/app/messages/en.json');
+import './styles/globals.css';
+let rawdata = require('./messages/en.json');
 
 let langCode = "en"
 let langObject = {}

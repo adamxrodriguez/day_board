@@ -8,12 +8,12 @@ import Content from '../components/Content/index'
 import Meta from '../components/Meta/index'
 import { useTranslation } from 'react-i18next'
 import { LandingLayout } from '@/app/layouts/LandingLayout'
-import MessagesSection from '@/app/components/messages'
+import MessagesSection from '@/app/dashboard/messages'
 import addItemModal from '../components/Modal/addItemModal'
 import Sidebar from '../components/Sidebar/index'
 import {CogIcon,DocumentIcon,XCircleIcon,CloudArrowUpIcon,} from '/node_modules/@heroicons/react/24/outline'
 import Link from 'next/link'
-import Table from '../components/Table'
+import Table from './Table'
 
 const Dashboard = () => {
   const { t } = useTranslation()

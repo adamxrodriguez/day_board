@@ -1,7 +1,10 @@
 import Link from 'next/link';
 import { useTranslation } from "react-i18next";
 
-const Item = ({ data, isLoading }) => {
+const Item = ({
+  data = null,
+  isLoading = false
+}) => {
   const { t } = useTranslation();
   return isLoading ? (
     <div className="h-6 mb-3 bg-gray-600 rounded animate-pulse" />
@@ -14,9 +17,6 @@ const Item = ({ data, isLoading }) => {
   );
 };
 
-Item.defaultProps = {
-  data: null,
-  isLoading: false,
-};
+
 
 export default Item;

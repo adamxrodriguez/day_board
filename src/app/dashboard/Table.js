@@ -16,14 +16,18 @@ import {
   CloudArrowUpIcon,
 } from '@heroicons/react/24/outline'
 import Link from 'next/link'
-import ItemMenuModal from '../components/Modal/ItemMenuModal'
 
-const Table = (tasks, selectedType, setSelectedType) => {
+
+const Table = (
+  tasks,
+  selectedType,
+  setSelectedType
+) => {
   const { t } = useTranslation()
   const [sortKey, setSortKey] = useState(null)
   const [sortOrder, setSortOrder] = useState('asc')
   const [isModalOpen, setIsModalOpen] = useState(false)
-  const [selectedTask, setSelectedTask] = useState(null)
+  const [selectedTask, setSelectedTask] = useState("")
   const openModal = () => setIsModalOpen(true)
   const closeModal = () => setIsModalOpen(false)
   const handleRowClick = (task) => {
@@ -244,7 +248,7 @@ const Table = (tasks, selectedType, setSelectedType) => {
       <div className="icon flex justify-end p-4">
         <button onClick={openModal}>
           <CloudArrowUpIcon className="h-12 w-12" />
-          Add
+          {t("common.action.add")}
         </button>
       </div>
       {/* Modal Component */}
@@ -256,14 +260,14 @@ const Table = (tasks, selectedType, setSelectedType) => {
         </div>
       )}
       {isModalOpen && (
-        <ItemMenuModal
+        <AddItemModal
           setIsModalOpen={setIsModalOpen}
           onClose={() => setIsModalOpen(false)}
         >
           {/* Display information about the selected task */}
           <h2>{selectedTask.name}</h2>
           {/* ... other information about the selected task ... */}
-        </ItemMenuModal>
+        </AddItemModal>
       )}
       {/*messages*/}
 

@@ -7,7 +7,16 @@ import Button from '@/components/Button/index';
 import Card from '@/components/Card/index';
 import { useDomain } from '@/hooks/data';
 
-const DomainCard = ({ apex, cname, domain, isLoading, refresh, remove }) => {
+
+
+const DomainCard = ({
+  apex = "",
+  cname = "",
+  domain,
+  isLoading = true,
+  refresh = () => {},
+  remove = () => {}
+}) => {
   const { name, subdomain, value, verified } = domain || {};
   const { data, isLoading: isChecking } = useDomain(name);
   const [display, setDisplay] = useState(verified ? 'cname' : 'txt');
@@ -180,14 +189,6 @@ const DomainCard = ({ apex, cname, domain, isLoading, refresh, remove }) => {
   );
 };
 
-DomainCard.defaultProps = {
-  apex: '',
-  cname: '',
-  isLoading: true,
-  name: '',
-  refresh: () => {},
-  remove: () => {},
-  slug: '',
-};
+
 
 export default DomainCard;

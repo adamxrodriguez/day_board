@@ -77,11 +77,11 @@ const Dashboard = () => {
           />
 
           {/*table*/}
-          {/* <Table
+          <Table
             tasks={tasks}
             selectedType={selectedType}
             setSelectedType={setSelectedType}
-          /> */}
+          />
         </div>
       </div>
     </LandingLayout>

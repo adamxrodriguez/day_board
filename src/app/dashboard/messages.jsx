@@ -23,15 +23,15 @@ const MessagesSection = () => {
   return (
     <div className="p-4 bg-sky-900 text-white messages " style={{ display: 'flex', flexgrow: '1', flexDirection: 'column', justifyContent: 'flex-end' }}>
       <div className="overflow-y-auto" style={{ maxHeight: 'calc(100% - 1rem)' }}> {/* Adjust maxHeight as needed */}
-        <div class="flex items-center justify-between bg-sky-400 p-2 mt-4 h-52">
+        <div className="flex items-center justify-between bg-sky-400 p-2 mt-4 h-52">
           <div>
-            <h2 class="text-lg font-semibold">{t("dashboard.messages.generalchat")}</h2>
+            <h2 className="text-lg font-semibold">{t("dashboard.messages.generalchat")}</h2>
 
-            <button class="p-2  h-10 w-10 bg-sky-900 rounded-full">
+            <button className="p-2  h-10 w-10 bg-sky-900 rounded-full">
               <ChatBubbleBottomCenterIcon alt="Add" />
             </button>
           </div>
-          <div class="p-2">
+          <div className="p-2">
             {messages.map((message, index) => (
               <div key={index} className={`chat-message ${message.sender === 'Me' ? 'me' : ''}`}>
                 <span style={{ color: 'red' }}>{message.sender}</span> ({message.time}): <span style={{ color: 'black' }}>{message.text}</span>
